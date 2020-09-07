@@ -1,0 +1,8 @@
+mixin comment(name, time, text)
+    +b.comment
+        +e.IMG(src="../../../img/avatar.png")
+        +e.info
+            +e.name=name
+            +e.time=time
+        +like('12')
+        +e.text.body=text

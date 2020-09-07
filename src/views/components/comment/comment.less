@@ -1,0 +1,21 @@
+.comment {
+  width: 70rem;
+  display: grid;
+  grid-template-columns: 5rem 65rem;
+  grid-template-rows: 5rem auto;
+  grid-gap: 1.2rem 1rem;
+
+  &__info {
+    font-size: 1.4rem;
+    color: @dark-shade-75;
+    .flex(@direction: column, @justify: center);
+  }
+
+  &__name {
+    margin-bottom: .6rem;
+  }
+
+  &__name {
+    font-weight: 700;
+  }
+}
