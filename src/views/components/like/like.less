@@ -1,0 +1,39 @@
+.like {
+  .size(4rem, 2rem);
+
+  > input {
+    display: none;
+
+    &:checked + .like__label {
+      border: 1px solid @purple;
+      color: @purple;
+
+      > .like__input:before {
+        background: url(../../../img/icons/purple-heart.svg) no-repeat;
+      }
+    }
+  }
+
+  &__label {
+    .flex(@align: center);
+    .size(100%, 100%);
+    cursor: pointer;
+    border: 1px solid @dark-shade-25;
+    color: @dark-shade-25;
+    border-radius: 1rem;
+  }
+
+  &__input {
+    .size(2rem, 2rem);
+    .position(@type: relative);
+    &:before {
+      .size(1rem, .8rem);
+      .position(@type: absolute, @top: 50%, @left: 50%);
+      content: '';
+      transform: translate(-50%, -50%);
+      background: url(../../../img/icons/heart.svg) no-repeat;
+      background-size: 1rem .8rem;
+      transition: .2s linear;
+    }
+  }
+}
