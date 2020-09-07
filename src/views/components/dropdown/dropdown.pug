@@ -1,0 +1,21 @@
+include /src/views/libs/bemto/bemto
+
+include ../counter/counter
+
+mixin dropdown(label, title, items, accept, decline)
+    +b.dropdown
+        +e.LABEL.label.h3 label
+        +e.select
+            span title
+            +e.expand
+        +e.options
+            each item in items
+                +e.option
+                    +e.option-name=item
+                    +counter()
+            if accept || decline
+                +e.actions
+                    if accept
+                        +e.accept ПРИМЕНИТЬ
+                    if decline
+                        +e.decline ОЧИСТИТЬ

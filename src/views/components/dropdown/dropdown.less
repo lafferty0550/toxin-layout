@@ -1,0 +1,80 @@
+.dropdown {
+  .position(relative);
+  .size();
+  font-size: 1.4rem;
+
+  > .shown {
+    transform: scaleY(1);
+  }
+
+  &__label {
+    margin-bottom: .8rem;
+    text-transform: uppercase;
+  }
+
+  &__select {
+    .size(32rem, @field-height);
+    .flex(@align: center, @justify: space-between);
+
+    border: 1px solid @dark-shade-50;
+    border-radius: @border-radius @border-radius @border-radius @border-radius;
+    padding-left: 1.5rem;
+    cursor: pointer;
+
+    &.opened {
+      border-radius: @border-radius @border-radius 0 0;
+    }
+  }
+
+  &__expand {
+    .square(@field-height);
+    .flex-center();
+    background: url(../../../img/icons/expand_more.svg) no-repeat center center;
+  }
+
+  &__options {
+    .position(absolute);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: .1s ease-in;
+
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 0 0 @border-radius @border-radius;
+    width: 100%;
+    box-shadow: 0 10px 20px @dark-shade-5;
+    border: 1px solid @dark-shade-50;
+    padding: 1.5rem .7rem 1.5rem 1.3rem;
+    background-color: white;
+    z-index: 999;
+  }
+
+  &__option {
+    .flex(@justify: space-between, @align: center);
+
+    text-transform: uppercase;
+    margin-bottom: 2.2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__actions {
+    .flex(@direction: row-reverse, @justify: space-between);
+
+    > * {
+      cursor: pointer;
+    }
+
+    font-size: 1.2rem;
+  }
+
+  &__accept {
+    color: @purple;
+  }
+
+  &__decline {
+    color: @dark-shade-50;
+  }
+}
