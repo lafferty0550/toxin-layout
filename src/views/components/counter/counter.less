@@ -1,0 +1,19 @@
+.counter {
+  .flex(@align: center);
+
+  &__btn {
+    .square(3rem);
+    .flex-center();
+
+    color: @dark-shade-50;
+    border: 1px solid @dark-shade-25;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  &__total {
+    margin: 0 1rem;
+    font-size: 1.2rem;
+  }
+}
