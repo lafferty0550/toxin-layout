@@ -1,0 +1,11 @@
+mixin pagination(label, description)
+    +b.pagination
+        +e.LABEL.label.h3=label
+        +e.items
+            +e.item.body 1
+            +e.item.body 2
+            +e.item.body 3
+            +e.item.body ...
+            +e.item.body 15
+            +e.item
+        +e.description=description
