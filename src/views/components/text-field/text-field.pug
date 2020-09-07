@@ -1,0 +1,6 @@
+include /src/views/libs/bemto/bemto
+
+mixin text-field(text, placeholder)
+    +b.text-field
+        +e.LABEL.label.h3=text
+        +e.INPUT(type="text", placeholder=placeholder).input
