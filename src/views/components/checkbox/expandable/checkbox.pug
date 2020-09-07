@@ -1,0 +1,13 @@
+include /src/views/libs/bemto/bemto
+include ../checkbox
+
+mixin checkbox-list(title, items)
+    +b.checkbox-list
+        input(type="checkbox", id='checkbox-list')
+        +e.LABEL.label(for='checkbox-list')
+            .h3=title
+            +e.expand
+        +e.items
+            for item in items
+                +e.item
+                    +checkbox(item)

@@ -1,0 +1,7 @@
+mixin rich-checkbox(label, description)
+    +b.rich-checkbox-field
+        +e.LABEL.label
+            input(type="checkbox")
+            +e.SPAN.input
+            span=label
+        +e.description=description
