@@ -1,0 +1,9 @@
+mixin property(icon, label, description)
+    +b.property
+        if icon === 'smile'
+            +e.IMG(src="../../../img/smile.svg")
+        else if icon === 'town'
+            +e.IMG(src="../../../img/location_city.svg")
+        +e.info
+            +e.LABEL.label=label
+            +e.SPAN.description.body=description
