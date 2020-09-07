@@ -1,0 +1,8 @@
+include /src/views/libs/bemto/bemto
+
+mixin switch(label)
+    +b.switch
+        +e.LABEL.label
+            input(type="checkbox")
+            +e.SPAN.input
+            span=label
