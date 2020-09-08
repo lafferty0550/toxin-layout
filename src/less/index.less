@@ -14,18 +14,15 @@ input {
   box-sizing: border-box;
 }
 
-.h1, .h2, .h3, .h4 {
+.h1, .h2, .h3 {
   display: block;
-}
-
-.h1, .h2 {
-  font-family: 'Quicksand', sans-serif;
   color: @dark-shade-100;
   font-weight: 700;
 }
 
-.h3, .h4 {
-  font-family: 'Montserrat', serif;
+.h1, .h2 {
+  font-family: 'Quicksand', sans-serif;
+  margin-bottom: 2rem;
 }
 
 .h1 {
@@ -40,9 +37,15 @@ input {
   font-size: 1.2rem;
   font-weight: 700;
   color: @dark-shade-100;
+  margin-bottom: .5rem;
+}
+
+.h3, .body {
+  font-family: 'Montserrat', serif;
 }
 
 .body {
+  display: inline;
   font-size: 1.4rem;
   color: @dark-shade-75;
 }
