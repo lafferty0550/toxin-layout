@@ -1,0 +1,21 @@
+.header {
+  width: 100%;
+  .flex(@justify: space-between, @align: center);
+  padding: 0 14rem;
+  font-size: 1.4rem;
+  box-shadow: 0 10px 20px @dark-shade-5;
+
+  > nav > ul {
+    .flex(@align: center);
+    color: @dark-shade-50;
+    list-style-type: none;
+
+    > li {
+      margin-right: 2rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

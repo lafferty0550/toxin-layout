@@ -1,0 +1,18 @@
+.find-room {
+  .card(@padding: 4rem 3rem);
+  .flex(@direction: column, @justify: space-between);
+  max-width: 38rem;
+
+  &__choice {
+    .flex(@justify: space-between);
+    margin-bottom: 2rem;
+
+    > *:first-child {
+      margin-right: 2rem;
+    }
+  }
+
+  > .button {
+    margin-top: 3rem;
+  }
+}

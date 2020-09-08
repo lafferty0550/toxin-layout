@@ -1,0 +1,45 @@
+.room {
+  .size();
+  .card(@padding: 0);
+
+  &__info {
+    padding: 2rem;
+  }
+
+  &__header {
+    border-bottom: 1px solid @dark-shade-10;
+    padding-bottom: 1rem;
+  }
+
+  &__footer {
+    padding-top: 1rem;
+  }
+
+  &__header, &__footer {
+    .flex(@justify: space-between);
+  }
+
+  &__number {
+    margin-right: .5rem;
+    font-weight: 700;
+    color: @dark-shade-100;
+
+    &:before {
+      content: '№';
+    }
+  }
+
+  &__type {
+    margin-right: 3.2rem;
+    color: @purple;
+    font-weight: 700;
+  }
+
+  &__price, &__feedback {
+    color: @dark-shade-50;
+    > span:first-child {
+      margin-right: .5rem;
+      font-weight: 700;
+    }
+  }
+}

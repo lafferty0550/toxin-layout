@@ -1,0 +1,28 @@
+mixin book-room()
+    +b.book-room
+        +e.header
+            +e.SPAN.number 888
+            +e.SPAN.type люкс
+            +e.SPAN.price
+                span 9 990₽
+                span в сутки
+        +e.choice
+            +dropdown('Прибытие', 'ДД.ММ.ГГГГ', [], true, false)
+            +dropdown('Выезд', 'ДД.ММ.ГГГГ', [], true, false)
+        +e.guests
+            +dropdown('Гости', 'Сколько гостей', [], true, true)
+        +e.sum
+            +e.sum-item
+                span 9 990₽ х 4 суток
+                span 39 960₽
+            +e.sum-item
+                span Сбор за услуги: скидка 2 179₽
+                span 0₽
+            +e.sum-item
+                span Сбор за дополнительные услуги
+                span 300₽
+        +e.total
+            +e.SPAN.total-title Итого
+            +e.dots
+            +e.SPAN.total-sum 38 081₽
+        +button('Забронировать', true, 'contained')

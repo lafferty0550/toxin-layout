@@ -23,6 +23,11 @@ include components/property/property
 include components/comment/comment
 include components/cards/registration/registration
 include components/cards/login/login
+include components/cards/room/room
+include components/cards/room/find/find-room
+include components/cards/room/book/book-room
+include components/header/header
+include components/footer/footer
 
 doctype html
 html
@@ -69,5 +74,11 @@ html
 
         +registration()
         +login()
+        +room-card()
+        +find-room()
+        +book-room()
+
+        +header()
+        +footer()
 
         script(src="./js/index.js")

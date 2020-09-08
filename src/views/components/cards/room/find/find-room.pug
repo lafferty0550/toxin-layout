@@ -1,0 +1,8 @@
+mixin find-room()
+    +b.find-room
+        .h1 Найдем номера под ваши пожелания
+        +e.choice
+            +dropdown('Прибытие', 'ДД.ММ.ГГГГ', [], true, false)
+            +dropdown('Выезд', 'ДД.ММ.ГГГГ', [], true, false)
+        +dropdown('Гости', 'Сколько гостей', [], true, true)
+        +button('Подобрать номер', true, 'contained')

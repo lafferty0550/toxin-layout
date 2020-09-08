@@ -1,0 +1,75 @@
+.book-room {
+  .card(@padding: 4rem 3rem);
+  font-size: 1.4rem;
+
+  &__header {
+    .flex(@justify: space-between, @align: center);
+    padding-bottom: 2rem;
+  }
+
+  &__choice {
+    > *:first-child {
+      margin-right: 2rem;
+    }
+  }
+
+  &__number {
+    margin-right: .5rem;
+    font-weight: 700;
+    color: @dark-shade-100;
+
+    &:before {
+      content: '№';
+    }
+  }
+
+  &__type {
+    margin-right: 12rem;
+    color: @purple;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    color: @dark-shade-50;
+  }
+
+  &__choice {
+    .flex();
+    margin-bottom: 2rem;
+  }
+
+  &__guests {
+    margin-bottom: 2rem;
+  }
+
+  &__sum {
+    color: @dark-shade-75;
+    margin-bottom: 3rem;
+  }
+
+  &__sum-item {
+    .flex(@justify: space-between);
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__total {
+    .flex(@justify: space-between, @align: baseline);
+    color: @dark-shade-100;
+    font-size: 1.9rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    white-space: nowrap;
+  }
+
+  &__dots {
+    width: 100%;
+    border: 1px dashed @dark-shade-25;
+  }
+}

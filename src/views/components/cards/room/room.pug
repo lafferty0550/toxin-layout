@@ -1,0 +1,15 @@
+mixin room-card()
+    +b.room
+        img(src="../../../../img/rooms/image.png")
+        +e.info
+            +e.header
+                +e.SPAN.number 888
+                +e.SPAN.type люкс
+                +e.SPAN.price
+                    span 9 990₽
+                    span в сутки
+            +e.footer
+                +rating()
+                +e.SPAN.feedback
+                    span 145
+                    span Отзывов
