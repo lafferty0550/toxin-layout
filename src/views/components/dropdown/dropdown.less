@@ -1,15 +1,13 @@
 .dropdown {
   .position(relative);
   .size();
-  font-size: 1.4rem;
 
   > .shown {
     transform: scaleY(1);
   }
 
-  &__label {
+  > .h3 {
     margin-bottom: .8rem;
-    text-transform: uppercase;
   }
 
   &__select {
@@ -68,13 +66,5 @@
     }
 
     font-size: 1.2rem;
-  }
-
-  &__accept {
-    color: @purple;
-  }
-
-  &__decline {
-    color: @dark-shade-50;
   }
 }

@@ -3,10 +3,7 @@
   border-radius: 2.2rem;
   width: 10rem;
   height: @field-height;
-  text-transform: uppercase;
   cursor: pointer;
-  font-size: 1.2rem;
-  font-weight: 700;
 
   &_contained {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -16,15 +13,20 @@
   &_outlined {
     color: @purple;
     border-radius: 2.2rem;
-    border: 1px solid @purple;
+    border: 2px solid @purple;
   }
 
   &_default {
+    .size();
     color: @purple;
 
     &.button_disabled {
       color: @dark-shade-50;
     }
+  }
+
+  &_gray {
+    color: @dark-shade-50;
   }
 
   &_disabled {

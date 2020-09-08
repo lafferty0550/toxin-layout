@@ -4,8 +4,6 @@
 
   &__label {
     .flex(@align: center);
-    font-size: 1.4rem;
-    color: @dark-shade-50;
     cursor: pointer;
 
     > input {
@@ -13,11 +11,15 @@
 
       &:checked + .checkbox-field__input {
         border: 1px solid @purple;
-      }
 
-      &:checked + .checkbox-field__input:before {
-        opacity: 1;
+        &:before {
+          opacity: 1;
+        }
       }
+    }
+
+    > .body {
+      color: @dark-shade-50;
     }
   }
 

@@ -1,4 +1,17 @@
-.flex(@type: flex, @justify: flex-start, @align: flex-start, @direction: flex-start) {
+// common styles for all h elements
+._h() {
+  display: block;
+  font-weight: 700;
+}
+
+// common styles for h3 and h3-cta elements
+._h3() {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.flex(@type: flex, @justify: flex-start, @align: flex-start, @direction: row) {
   display: @type;
   justify-content: @justify;
   align-items: @align;

@@ -1,7 +1,7 @@
 mixin rich-checkbox(label, description)
-    +b.rich-checkbox-field
+    +b.checkbox-field_rich
         +e.LABEL.label
             input(type="checkbox")
             +e.SPAN.input
-            span=label
-        +e.description=description
+            +e.title.h3-cta=label
+            +e.description.body=description

@@ -1,14 +1,12 @@
 .bullet {
-  &__label {
-    .flex(@align: center);
+  .flex(@align: center);
+  .size();
 
-    &:before {
-      content: '';
-      display: block;
-      .square(1rem);
-      margin-right: 1rem;
-      background-color: @dark-shade-25;
-      border-radius: 50%;
-    }
+  &:before {
+    content: '';
+    .square(1rem);
+    margin-right: 1rem;
+    background-color: @dark-shade-25;
+    border-radius: 50%;
   }
 }

@@ -14,7 +14,7 @@ $(document).ready(function () {
         if (isLeftThumb)
             _this.prop('value', Math.min(parseInt(_this.prop('value')), parseInt(inputRight.prop('value')) - 1));
         else
-            _this.prop('value', Math.max(parseInt(_this.prop('value')), parseInt(inputLeft.prop('value')) - 1));
+            _this.prop('value', Math.max(parseInt(_this.prop('value')), parseInt(inputLeft.prop('value'))));
         const percent = ((_this.prop('value') - min) / (max - min)) * 100;
         if (isLeftThumb) {
             thumbLeft.css('left', `${percent}%`);

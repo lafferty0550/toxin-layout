@@ -1,9 +1,3 @@
-mixin button(label, isBig, type)
-    if isBig
-        +b.button_big._contained=label
-    else if type === 'contained'
-        +b.button_contained=label
-    else if type === 'outlined'
-        +b.button_outlined=label
-    else if type === 'default'
-        +b.button_default=label
+mixin button(label, isBig, type, color)
+    - var className = `button ${isBig ? 'button_big' : ''} button_${type} button_${color} h3-cta`;
+    .button(class=className)=label

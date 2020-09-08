@@ -1,7 +1,7 @@
 .checkbox-list {
   width: 26rem;
+
   &__label {
-    text-transform: uppercase;
     .size(100%, @field-height);
     .flex(@justify: space-between, @align: center);
     cursor: pointer;
@@ -13,7 +13,7 @@
   }
 
   &__items {
-    transition: .1s;
+    transition: transform .1s;
     transform-origin: top;
   }
 
@@ -32,6 +32,7 @@
     }
     &:checked + label + .checkbox-list__items {
       transform: scaleY(0);
+      height: 0;
     }
   }
 }

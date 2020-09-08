@@ -5,4 +5,5 @@ mixin checkbox(label)
         +e.LABEL.label
             input(type="checkbox")
             +e.SPAN.input
-            span=label
+            +e.SPAN.title.body=label
+            block

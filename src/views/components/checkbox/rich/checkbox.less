@@ -1,50 +1,23 @@
-.rich-checkbox-field {
-  .flex(@direction: column, @justify: center);
+.checkbox-field_rich {
   .size();
-  width: 26rem;
+  width: 26.6rem;
 
-  &__label {
-    .flex(@align: center);
-    font-size: 1.4rem;
-    color: @dark-shade-75;
-    font-weight: 700;
-    cursor: pointer;
+  > label {
+    display: grid;
+    grid-template-columns: 2rem max-content;
+    grid-template-rows: 2rem max-content;
+    row-gap: .5rem;
+    column-gap: 1rem;
 
-    > input {
-      display: none;
-
-      &:checked + .rich-checkbox-field__input {
-        border: 1px solid @purple;
-      }
-
-      &:checked + .rich-checkbox-field__input:before {
-        opacity: 1;
-      }
+    > .checkbox-field__title {
+      color: @dark-shade-75;
+      font-size: 1.4rem;
+      text-transform: none;
     }
-  }
 
-  &__description {
-    margin-left: 3rem;
-    font-size: 1.2rem;
-    color: @dark-shade-25;
-  }
-
-  &__input {
-    .square(2rem);
-    .position(@type: relative);
-    margin: 0 1rem 0 0;
-    border-radius: @border-radius;
-    border: 1px solid @dark-shade-50;
-
-    &:before {
-      .position(@type: absolute, @top: 50%, @left: 50%);
-      .square(1rem);
-      content: '';
-      transform: translate(-50%, -50%);
-      background: url(../../../img/check.svg) no-repeat;
-      background-size: 1rem 1rem;
-      opacity: 0;
-      transition: .2s;
+    > .checkbox-field__description {
+      grid-column: 2;
+      font-size: 1.2rem;
     }
   }
 }

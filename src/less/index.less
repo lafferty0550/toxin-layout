@@ -1,5 +1,6 @@
 @import './*';
 @import '../views/**/*.less';
+@import (less) './normalise.css';
 
 html {
   font-size: 10px;
@@ -14,13 +15,9 @@ input {
   box-sizing: border-box;
 }
 
-.h1, .h2, .h3 {
-  display: block;
-  color: @dark-shade-100;
-  font-weight: 700;
-}
-
 .h1, .h2 {
+  ._h();
+  color: @dark-shade-100;
   font-family: 'Quicksand', sans-serif;
   margin-bottom: 2rem;
 }
@@ -33,15 +30,18 @@ input {
   font-size: 1.9rem;
 }
 
-.h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: @dark-shade-100;
-  margin-bottom: .5rem;
-}
-
 .h3, .body {
   font-family: 'Montserrat', serif;
+}
+
+.h3 {
+  ._h3();
+  color: @dark-shade-100;
+  margin-bottom: .5rem;
+
+  &-cta {
+    ._h3();
+  }
 }
 
 .body {
