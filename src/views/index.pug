@@ -1,0 +1,73 @@
+//include ../../libs/bemto/bemto
+
+//block props
+//    - var text = 'Text';
+//    - var placeholder = 'Placeholder';
+
+include components/text-field/text-field
+include components/text-field/subscription/text-field
+include components/dropdown/dropdown
+include components/checkbox/checkbox
+include components/checkbox/expandable/checkbox
+include components/radio/radio
+include components/switch/switch
+include components/like/like
+include components/rating/rating
+include components/range-slider/range-slider
+include components/text-field/masked/text-field
+include components/button/button
+include components/pagination/pagination
+include components/checkbox/rich/checkbox
+include components/bullet/bullet
+include components/property/property
+include components/comment/comment
+include components/cards/registration/registration
+include components/cards/login/login
+
+doctype html
+html
+    head
+        meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+        meta(name="HandheldFriendly" content="true")
+        link(rel="stylesheet" href="./css/index.css")
+    body
+        +bullet('Нельзя с питомцами')
+        +bullet('Без вечеринок и мероприятий')
+        +bullet('Время прибытия - после 13:00, а выезд до 12:00')
+
+        +button('Click me', false, 'contained')
+        +button('Click me', false, 'outlined')
+        +button('Click me', false, 'default')
+        +button('Click me', true)
+
+        +checkbox('Можно курить')
+        +checkbox('Можно с питомцами')
+        +checkbox('Можно пригласить гостей (до 10 человек)')
+
+        +rich-checkbox('Широкий коридор', 'Ширина коридора в номере не меньше 91см.')
+        +rich-checkbox('Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера.')
+        +checkbox-list('Choose:', ['field1', 'field2', 'field3'])
+
+        +dropdown('Rooms', 'Choose please', ['first', 'second', 'third'], true, true)
+        +dropdown('Email', 'Choose please', ['first', 'second', 'third'], true, false)
+        +dropdown('Nickname', 'Choose please', ['first', 'second', 'third'], false, true)
+        +dropdown('Password', 'Choose please', ['first', 'second', 'third'], false, false)
+
+        +text-field('mylabel', 'myplaceholder')
+        +sub-text-field('text', 'placeholder')
+        +radio('field')
+        +switch('field')
+        +like('12')
+        +rating()
+        +multi-range-slider('Price', 0, 100, 25, 75)
+        +masked-text-field('Type date')
+        +pagination('Label', '1-12 variants of 100+ arend variants')
+        +property('smile', 'Комфорт', 'Шумопоглощающие стены')
+        +property('town', 'Комфорт', 'Шумопоглощающие стены')
+        +comment('Мурат Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+
+        +registration()
+        +login()
+
+        script(src="./js/index.js")

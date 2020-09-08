@@ -107,7 +107,7 @@ const fonts = (cb) => {
 
 const js = () => {
     return src(path.src.js)
-        .pipe(concat('counter.js'))
+        .pipe(concat('index.js'))
         .pipe(production ? uglify() : gulpEmpty())
         .pipe(dest(path.build.js));
 };

@@ -1,0 +1,46 @@
+.registration {
+  width: fit-content;
+  padding: 4rem 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.2);
+  border-radius: .4rem;
+  .flex(@direction: column, @justify: space-between);
+
+  > .text-field {
+    margin-bottom: 1rem;
+  }
+
+  &__choice {
+    .flex();
+    margin-bottom: 2rem;
+
+    > * {
+      margin-right: 2rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  > .text-field_masked {
+    margin-bottom: 2rem;
+  }
+
+  > .switch {
+    margin-bottom: 2rem;
+  }
+
+  > .button {
+    margin-bottom: 3rem;
+  }
+
+  &__footer {
+    width: 100%;
+    .flex(@align: center, @justify: space-between);
+  }
+
+  &__notice {
+    font-size: 1.4rem;
+    color: black;
+  }
+}

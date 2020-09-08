@@ -1,0 +1,9 @@
+mixin login()
+    +b.login
+        .h1 Войти
+        +text-field(null, 'Email')
+        +text-field(null, 'Пароль')
+        +button('Войти', true, 'contained')
+        +e.footer
+            +e.SPAN.notice Уже есть аккаунт на TOXIN
+            +button('Войти', false, 'outlined')

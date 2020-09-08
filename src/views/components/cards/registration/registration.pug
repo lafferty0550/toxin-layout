@@ -1,0 +1,17 @@
+mixin registration()
+    +b.registration
+        span.title.h1="Регистрация аккаунта"
+        +text-field(null, 'Имя')
+        +text-field(null, 'Фамилия')
+        +e.choice
+            +radio('Мужчина')
+            +radio('Женщина')
+        +masked-text-field('Дата рождения')
+        .h3 Данные для входа в сервис
+        +text-field(null, 'Email')
+        +text-field(null, 'Пароль')
+        +switch('Получать спецпредложения')
+        +button('Зарегистрироваться', true, 'contained')
+        +e.footer
+            +e.SPAN.notice Уже есть аккаунт на TOXIN
+            +button('Войти', false, 'outlined')
