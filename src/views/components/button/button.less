@@ -1,10 +1,8 @@
 .button {
   .flex-center();
   border-radius: 2.2rem;
-  min-width: 10rem;
-  height: @field-height;
   cursor: pointer;
-  padding: 0 2rem;
+  padding: .9rem 1.9rem;
 
   &_contained {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -37,8 +35,9 @@
   }
 
   &_big {
-    width: 32rem;
+    width: 100%;
     position: relative;
+    padding: 1.5rem 0rem;
 
     &:after {
       .square(@field-height);

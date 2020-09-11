@@ -1,5 +1,5 @@
-include /src/views/libs/bemto/bemto
 include ../checkbox
+include ../rich/checkbox
 
 mixin checkbox-list(title, items)
     +b.checkbox-list
@@ -11,3 +11,14 @@ mixin checkbox-list(title, items)
             for item in items
                 +e.item
                     +checkbox(item)
+
+mixin rich-checkbox-list(title, items)
+    +b.checkbox-list
+        input(type="checkbox", id='checkbox-list')
+        +e.LABEL.label(for='checkbox-list')
+            +e.title.h3=title
+            +e.expand
+        +e.items
+            for item in items
+                +e.item
+                    +rich-checkbox(item.label, item.description)

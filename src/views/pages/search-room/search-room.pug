@@ -1,0 +1,35 @@
+include ../../components/dropdown/dropdown
+include ../../components/range-slider/range-slider
+include ../../components/checkbox/expandable/checkbox
+include ../../components/cards/room/room
+include ../../components/pagination/pagination
+
+- var options = ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)'];
+- var rich_options = [{label: 'Широкий коридор', description: 'Ширина коридоров в номере не менее 91 см.'}, {label: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист  и проводит до номера.'}];
+- var addition_options = ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь'];
+
+.container
+    +b.toolbar
+        +dropdown('Даты пребывания в отеле', '19 авг - 23 авг', [])
+        +dropdown('Гости', '3 гостя, 1 младенец', [])
+        +range-slider('диапазон цены', 5000, 10000, 0, 20000)
+        +checkbox-list('Checkbox Buttons', options)
+        +rich-checkbox-list('доступность', rich_options)
+        +dropdown('удобства номера', '2 спальни, 2 кровати...', [])
+        +checkbox-list('дополнительные удобства', addition_options)
+    +b.list
+        .h1 Номера, которые мы для вас подобрали
+        +e.cards
+            +room-card()
+            +room-card()
+            +room-card()
+            +room-card()
+            +room-card()
+            +room-card()
+            +room-card()
+            +room-card()
+            +room-card()
+            +room-card()
+            +room-card()
+            +room-card()
+        +pagination(null, '1 – 12 из 100+ вариантов аренды')

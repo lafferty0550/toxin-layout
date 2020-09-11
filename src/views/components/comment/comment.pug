@@ -1,3 +1,5 @@
+include ../like/like
+
 mixin comment(name, time, text)
     +b.comment
         +e.IMG(src="../../../img/avatars/avatar.png")
@@ -6,3 +8,9 @@ mixin comment(name, time, text)
             +e.time=time
         +like('12')
         +e.text.body=text
+
+mixin comment-list(title, comments)
+    +b.comment-list
+        .h2=title
+        for comment in comments
+            +comment(comment.name, comment.time, comment.text)

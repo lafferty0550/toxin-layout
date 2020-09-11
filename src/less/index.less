@@ -6,6 +6,22 @@
 html {
   font-size: 10px;
   font-family: 'Montserrat', serif;
+
+  @media (max-width: 1296px) {
+    font-size: 9px;
+  }
+
+  @media (max-width: 1152px) {
+    font-size: 8px;
+  }
+
+  @media (max-width: 1008px) {
+    font-size: 7px;
+  }
+
+  @media (max-width: 864px) {
+    font-size: 6px;
+  }
 }
 
 input {
@@ -26,6 +42,7 @@ input {
 
 .h1 {
   font-size: 2.4rem;
+  line-height: 3rem;
 }
 
 .h2 {
@@ -49,5 +66,15 @@ input {
 .body {
   display: inline;
   font-size: 1.4rem;
+  line-height: 2.4rem;
   color: @dark-shade-75;
+}
+
+ul {
+  margin: 0;
+}
+
+.container {
+  padding: 0 14rem;
+  .flex(@justify: space-between);
 }

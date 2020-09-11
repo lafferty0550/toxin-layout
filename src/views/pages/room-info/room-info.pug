@@ -1,0 +1,30 @@
+include ../../components/property/property
+include ../../components/comment/comment
+include ../../components/bullet/bullet
+include ../../components/cards/room/book/book-room
+
+- var properties = [{icon: 'smile', label: 'Комфорт', description: 'Шумоподавляющие стены'}, {icon: 'smile', label: 'Удобство', description: 'Окно в каждой из спален'}, {icon: 'smile', label: 'Уют', description: 'Номер оснащен камином'}]
+- var comments = [{name: 'Мурат Сарафанов', time: '5 дней назад', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'}, {name: 'Патрисия Стёклышкова', time: 'Неделю назад', text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'}]
+- var bullets = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
+- var feedback_bullets = [{label: 'Великолепно', color: 'yellow'}, {label: 'Хорошо', color: 'green'}, {label: 'Удовлетворительно', color: 'blue'}, {label: 'Разочарован', color: 'black'}]
+
++b.room-info
+    +e.images
+        +e.IMG(src="./img/room-info/image.png").image_main
+        +e.IMG(src="./img/room-info/image2.png").image_secondary
+        +e.IMG(src="./img/room-info/image3.png").image_thirdly
+    .container
+        +e.info
+            +e.room-info
+                +property-list('Сведения о номере', properties)
+            +e.feedback
+                .h2 Впечатления от номера
+                +e.statistic
+                    +e.IMG(src="./img/icons/pie.svg")
+                    +bullet-list(null, feedback_bullets)
+            +comment-list('Отзывы посетителей номера', comments)
+            +bullet-list('Правила', bullets)
+            +e.feature
+                .h2 Отмена
+                .body Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+        +book-room()

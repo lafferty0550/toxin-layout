@@ -1,0 +1,66 @@
+.room-info {
+  &__images {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+    "main secondary"
+    "main thirdly";
+  }
+
+  &__image {
+    width: 100%;
+    &_main {
+      grid-area: main;
+      height: 100%;
+    }
+    &_secondary {
+      grid-area: secondary;
+    }
+    &_thirdly {
+      grid-area: thirdly;
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "room-info statistics"
+    "comment-list comment-list"
+    "rules feature";
+  }
+
+  &__room-info {
+    grid-area: room-info;
+  }
+
+  &__statistic {
+    .flex(@align: center);
+    grid-area: statistics;
+
+    > img {
+      margin-right: 3rem;
+    }
+  }
+
+  & .comment-list {
+    grid-area: comment-list;
+  }
+
+  & .bullet-list {
+    grid-area: rules;
+  }
+
+  &__feature {
+    grid-area: feature;
+  }
+
+  > .container {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+
+    > .book-room {
+      margin-left: 7rem;
+    }
+  }
+}

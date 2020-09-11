@@ -9,4 +9,38 @@
     background-color: @dark-shade-25;
     border-radius: 50%;
   }
+
+  &_yellow {
+    &:before {
+      background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+    }
+  }
+
+  &_blue {
+    &:before {
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+  }
+
+  &_green {
+    &:before {
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    }
+  }
+
+  &_black {
+    &:before {
+      background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+    }
+  }
+}
+
+.bullet-list {
+  > .h2 {
+    margin-left: 2.4rem;
+  }
+
+  > .bullet {
+    margin-bottom: 1rem;
+  }
 }

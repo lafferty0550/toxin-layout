@@ -1,33 +1,4 @@
-//include ../../libs/bemto/bemto
-
-//block props
-//    - var text = 'Text';
-//    - var placeholder = 'Placeholder';
-
-include components/text-field/text-field
-include components/text-field/subscription/text-field
-include components/dropdown/dropdown
-include components/checkbox/checkbox
-include components/checkbox/expandable/checkbox
-include components/radio/radio
-include components/switch/switch
-include components/like/like
-include components/rating/rating
-include components/range-slider/range-slider
-include components/text-field/masked/text-field
-include components/button/button
-include components/pagination/pagination
-include components/checkbox/rich/checkbox
-include components/bullet/bullet
-include components/property/property
-include components/comment/comment
-include components/cards/registration/registration
-include components/cards/login/login
-include components/cards/room/room
-include components/cards/room/find/find-room
-include components/cards/room/book/book-room
-include components/header/header
-include components/footer/footer
+include ./libs/bemto/bemto
 
 doctype html
 html
@@ -37,48 +8,11 @@ html
         meta(name="HandheldFriendly" content="true")
         link(rel="stylesheet" href="./css/index.css")
     body
-        +bullet('Нельзя с питомцами')
-        +bullet('Без вечеринок и мероприятий')
-        +bullet('Время прибытия - после 13:00, а выезд до 12:00')
-
-        +button('Click me', false, 'contained')
-        +button('Click me', false, 'outlined')
-        +button('Click me', false, 'default')
-        +button('Click me', true)
-
-        +checkbox('Можно курить')
-        +checkbox('Можно с питомцами')
-        +checkbox('Можно пригласить гостей (до 10 человек)')
-
-        +rich-checkbox('Широкий коридор', 'Ширина коридора в номере не меньше 91см.')
-        +rich-checkbox('Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера.')
-        +checkbox-list('Choose:', ['field1', 'field2', 'field3'])
-
-        +dropdown('Rooms', 'Choose please', ['first', 'second', 'third'], true, true)
-        +dropdown('Email', 'Choose please', ['first', 'second', 'third'], true, false)
-        +dropdown('Nickname', 'Choose please', ['first', 'second', 'third'], false, true)
-        +dropdown('Password', 'Choose please', ['first', 'second', 'third'], false, false)
-
-        +text-field('mylabel', 'myplaceholder')
-        +sub-text-field('text', 'placeholder')
-        +radio('field')
-        +switch('field')
-        +like('12')
-        +rating()
-        +multi-range-slider('Price', 0, 100, 25, 75)
-        +masked-text-field('Type date')
-        +pagination('Label', '1-12 variants of 100+ arend variants')
-        +property('smile', 'Комфорт', 'Шумопоглощающие стены')
-        +property('town', 'Комфорт', 'Шумопоглощающие стены')
-        +comment('Мурат Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
-
-        +registration()
-        +login()
-        +room-card()
-        +find-room()
-        +book-room()
-
-        +header()
-        +footer()
-
+        include components/header/header
+        //include pages/landing/landing
+        include pages/search-room/search-room
+        //include pages/room-info/room-info
+        //include pages/login/login
+        //include pages/registration/registration
+        include components/footer/footer
         script(src="./js/index.js")

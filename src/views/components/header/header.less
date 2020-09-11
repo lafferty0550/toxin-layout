@@ -1,9 +1,18 @@
 .header {
   width: 100%;
   .flex(@justify: space-between, @align: center);
-  padding: 0 14rem;
+  padding: 1.5rem 14rem;
   font-size: 1.4rem;
   box-shadow: 0 10px 20px @dark-shade-5;
+
+  > .logo {
+    width: 10.5rem;
+    height: 4rem;
+  }
+
+  * .button {
+    height: 3.4rem;
+  }
 
   > nav > ul {
     .flex(@align: center);
@@ -11,10 +20,20 @@
     list-style-type: none;
 
     > li {
-      margin-right: 2rem;
+      margin-right: 2.2rem;
 
       &:last-child {
         margin-right: 0;
+      }
+
+      &:nth-child(2), &:nth-child(5) {
+        .flex(@align: center);
+        &:after {
+          .square(2rem);
+          content: '';
+          display: block;
+          background: url(../../../img/icons/expand_more.svg) no-repeat right;
+        }
       }
     }
   }

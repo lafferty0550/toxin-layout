@@ -1,19 +1,20 @@
-mixin header()
-    +b.header
-        +b.IMG(src="../../../img/icons/logo.svg").logo
-        nav
-            ul
-                li
-                    a О нас
-                li
-                    a Услуги
-                li
-                    a Вакансии
-                li
-                    a Новости
-                li
-                    a Сообщения
-                li
-                    +button('Войти', false, 'outlined')
-                li
-                    +button('Зарегистрироваться', false, 'contained')
+include ../button/button
+
++b.header
+    +b.IMG(src="../../../img/icons/logo.svg").logo
+    nav
+        ul
+            li
+                a О нас
+            li
+                a Услуги
+            li
+                a Вакансии
+            li
+                a Новости
+            li
+                a Соглашения
+            li
+                +button('Войти', false, 'outlined')
+            li
+                +button('Зарегистрироваться', false, 'contained')

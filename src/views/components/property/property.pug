@@ -4,3 +4,9 @@ mixin property(icon, label, description)
         +e.info
             +e.LABEL.label=label
             +e.SPAN.description.body=description
+
+mixin property-list(title, properties)
+    +b.property-list
+        .h2=title
+        for property in properties
+            +property(property.icon, property.label, property.description)

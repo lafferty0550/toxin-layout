@@ -1,0 +1,38 @@
+.toolbar {
+  width: 26rem;
+
+  padding-top: 3rem;
+
+  > .dropdown {
+    margin-bottom: 2rem;
+  }
+
+  > .range-slider {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  > .checkbox-list {
+    margin-bottom: 3rem;
+  }
+}
+
+.list {
+  width: 100%;
+  margin-left: 6rem;
+  margin-top: 3rem;
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem 1.3rem;
+    margin-bottom: 4rem;
+
+    > .room {
+      width: 100%;
+    }
+  }
+
+  > .pagination {
+    margin: 0 auto;
+  }
+}
