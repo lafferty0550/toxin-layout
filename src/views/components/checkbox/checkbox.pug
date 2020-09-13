@@ -3,5 +3,39 @@ mixin checkbox(label)
         +e.LABEL.label
             input(type="checkbox")
             +e.SPAN.input
-            +e.SPAN.title.body=label
-            block
+        +e.SPAN.title.body=label
+
+mixin rich-checkbox(label, description)
+    +b.checkbox-field_rich
+        +e.LABEL.label
+            input(type="checkbox")
+            +e.SPAN.input
+            +e.title.h3-cta=label
+            +e.description.body=description
+
+mixin checkbox-list(title, items, isRich)
+    +b.checkbox-list(class=`${attributes.class || ''}`)
+        input(type="checkbox", id=title)
+        +e.LABEL.label(for=title)
+            +e.title.h3=title
+        +e.items
+            for item in items
+                +e.item
+                    if isRich
+                        +rich-checkbox(item.label, item.description)
+                    else
+                        +checkbox(item)
+
+mixin checkbox-list-expandable(title, items, isRich)
+    +b.checkbox-list_expandable(class=`${attributes.class || ''}`)
+        input(type="checkbox", id=title)
+        +e.LABEL.label(for=title)
+            +e.title.h3=title
+            +e.expand
+        +e.items
+            for item in items
+                +e.item
+                    if isRich
+                        +rich-checkbox(item.label, item.description)
+                    else
+                        +checkbox(item)

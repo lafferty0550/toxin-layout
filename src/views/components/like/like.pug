@@ -1,7 +1,7 @@
 // TODO: review
 
 mixin like(value)
-    +b.like
+    +b.like(class=`${attributes.class || ''}`)
         input(type="checkbox", id="here", name="here")
         +e.LABEL.label(for="here")
             +e.input

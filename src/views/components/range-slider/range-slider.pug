@@ -1,4 +1,4 @@
-mixin range-slider(label, min, max, minValue, maxValue)
+mixin range-slider(label, description, min, max, minValue, maxValue)
     +b.range-slider
         +e.header
             +e.LABEL.label.h3=label
@@ -10,3 +10,4 @@ mixin range-slider(label, min, max, minValue, maxValue)
             +e.range
             +e.thumb_left
             +e.thumb_right
+        +e.description=description

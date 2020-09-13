@@ -1,5 +1,5 @@
 @slider-height: .6rem;
-@slider-width: 26rem;
+@slider-width: 100%;
 
 .range-slider {
   width: @slider-width;
@@ -9,6 +9,7 @@
   &__header {
     .flex(@justify: space-between);
     width: 100%;
+    margin-bottom: 2rem;
   }
 
   &__label {
@@ -45,13 +46,19 @@
       cursor: pointer;
     }
   }
+
+  &__description {
+    font-size: 1.2rem;
+    color: rgba(31, 32, 65, 0.5);
+    white-space: nowrap;
+  }
 }
 
 .slider {
+  .size(100%, @slider-height);
   position: relative;
   z-index: 1;
-  height: @slider-height;
-  width: @slider-width;
+  margin-bottom: 1.5rem;
 
   &__track {
     position: absolute;

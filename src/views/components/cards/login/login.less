@@ -1,8 +1,8 @@
 .login {
-  .card(@padding: 4rem 3rem);
+  .card(@padding: 3.8rem 3rem 2.6rem 3rem);
   .flex(@direction: column, @justify: space-between);
   background-color: white;
-  width: 38rem;
+  width: 26.5%;
 
   > .text-field {
     margin-bottom: 1rem;
@@ -10,12 +10,15 @@
 
   > .button {
     margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2.8rem;
   }
 
   &__footer {
     width: 100%;
     .flex(@align: center, @justify: space-between);
+    > .button {
+      padding: 1.4rem 1.8rem;
+    }
   }
 
   &__notice {

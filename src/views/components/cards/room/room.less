@@ -1,13 +1,13 @@
 .room {
-  .size();
   .card(@padding: 0);
+  font-size: 1.4rem;
 
   > img {
     width: 100%;
   }
 
   &__info {
-    padding: 2rem;
+    padding: 7.4% 6.5%;
   }
 
   &__header {
@@ -17,26 +17,33 @@
 
   &__footer {
     padding-top: 1rem;
+    .flex(@justify: space-between, @align: center);
   }
 
-  &__header, &__footer {
-    .flex(@justify: space-between);
+  &__header {
+    .flex(@justify: space-between, @align: flex-end);
   }
 
   &__number {
-    margin-right: .5rem;
+    margin-right: .4rem;
     font-weight: 700;
     color: @dark-shade-100;
+    font-size: 1.8rem;
 
     &:before {
       content: '№';
+      font-size: 1.3rem;
+      margin-right: .5rem;
     }
   }
 
   &__type {
-    margin-right: 3.2rem;
     color: @purple;
     font-weight: 700;
+  }
+
+  &__price > span:last-child {
+    font-size: 1.2rem;
   }
 
   &__price, &__feedback {

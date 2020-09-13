@@ -3,10 +3,11 @@ include ../../../dropdown/dropdown
 mixin book-room()
     +b.book-room
         +e.header
-            +e.SPAN.number 888
-            +e.SPAN.type люкс
+            div
+                +e.SPAN.number 888
+                +e.SPAN.type люкс
             +e.SPAN.price
-                span 9 990₽
+                strong 9 990₽
                 span в сутки
         +e.choice
             +dropdown('Прибытие', 'ДД.ММ.ГГГГ', [], true, false)
@@ -21,7 +22,7 @@ mixin book-room()
                 span Сбор за услуги: скидка 2 179₽
                 span 0₽
             +e.sum-item
-                span Сбор за дополнительные услуги
+                span Сбор за дополнительные услуги qqqq
                 span 300₽
         +e.total
             +e.SPAN.total-title Итого

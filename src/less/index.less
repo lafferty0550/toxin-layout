@@ -7,15 +7,27 @@ html {
   font-size: 10px;
   font-family: 'Montserrat', serif;
 
-  @media (max-width: 1296px) {
+  @media (min-width: 1872px) {
+    font-size: 13px;
+  }
+
+  @media (min-width: 1728px) {
+    font-size: 12px;
+  }
+
+  @media (min-width: 1584px) {
+    font-size: 11px;
+  }
+
+  @media (max-width: 1370px) {
     font-size: 9px;
   }
 
-  @media (max-width: 1152px) {
+  @media (max-width: 1235px) {
     font-size: 8px;
   }
 
-  @media (max-width: 1008px) {
+  @media (max-width: 1110px) {
     font-size: 7px;
   }
 
@@ -76,5 +88,5 @@ ul {
 
 .container {
   padding: 0 14rem;
-  .flex(@justify: space-between);
+  .flex();
 }

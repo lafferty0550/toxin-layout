@@ -5,7 +5,7 @@ include ../../button/button
 include ../../radio/radio
 
 +b.registration
-    span.title.h1="Регистрация аккаунта"
+    +e.SPAN.title.h1="Регистрация аккаунта"
     +text-field(null, 'Имя')
     +text-field(null, 'Фамилия')
     +e.choice
@@ -18,5 +18,5 @@ include ../../radio/radio
     +switch('Получать спецпредложения')
     +button('Зарегистрироваться', true, 'contained')
     +e.footer
-        +e.SPAN.notice Уже есть аккаунт на TOXIN
+        +e.SPAN.notice Уже есть аккаунт на Toxin
         +button('Войти', false, 'outlined')

@@ -1,7 +1,7 @@
 .room-info {
   &__images {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 68% 32%;
     grid-template-areas:
     "main secondary"
     "main thirdly";
@@ -23,11 +23,12 @@
 
   &__info {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 40% 60%;
     grid-template-areas:
     "room-info statistics"
     "comment-list comment-list"
     "rules feature";
+    grid-gap: 2.1rem 7.5rem;
   }
 
   &__room-info {
@@ -35,20 +36,33 @@
   }
 
   &__statistic {
-    .flex(@align: center);
+    .flex(@align: flex-end);
     grid-area: statistics;
 
     > img {
       margin-right: 3rem;
+      .square(12rem);
+    }
+
+    > .bullet-list {
+      grid-area: rules;
+      margin-left: .5rem;
+      margin-bottom: -.3rem;
+      > * {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__feedback {
+    > .h2 {
+      margin-bottom: 2rem;
     }
   }
 
   & .comment-list {
     grid-area: comment-list;
-  }
-
-  & .bullet-list {
-    grid-area: rules;
+    margin-bottom: 1rem;
   }
 
   &__feature {

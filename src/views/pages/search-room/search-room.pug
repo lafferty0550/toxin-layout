@@ -1,6 +1,6 @@
 include ../../components/dropdown/dropdown
 include ../../components/range-slider/range-slider
-include ../../components/checkbox/expandable/checkbox
+include ../../components/checkbox/checkbox
 include ../../components/cards/room/room
 include ../../components/pagination/pagination
 
@@ -12,11 +12,11 @@ include ../../components/pagination/pagination
     +b.toolbar
         +dropdown('Даты пребывания в отеле', '19 авг - 23 авг', [])
         +dropdown('Гости', '3 гостя, 1 младенец', [])
-        +range-slider('диапазон цены', 5000, 10000, 0, 20000)
-        +checkbox-list('Checkbox Buttons', options)
-        +rich-checkbox-list('доступность', rich_options)
+        +range-slider('диапазон цены', 'Стоимость за сутки пребывания в номере', 5000, 10000, 0, 20000)
+        +checkbox-list('Checkbox Buttons', options)(class='toolbar__options')
+        +checkbox-list('доступность', rich_options, true)(class='toolbar__availability')
         +dropdown('удобства номера', '2 спальни, 2 кровати...', [])
-        +checkbox-list('дополнительные удобства', addition_options)
+        +checkbox-list-expandable('дополнительные удобства', addition_options)(class='toolbar__addition')
     +b.list
         .h1 Номера, которые мы для вас подобрали
         +e.cards

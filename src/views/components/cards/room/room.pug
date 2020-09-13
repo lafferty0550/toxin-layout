@@ -5,8 +5,9 @@ mixin room-card()
         img(src="../../../../img/rooms/image.png")
         +e.info
             +e.header
-                +e.SPAN.number 888
-                +e.SPAN.type люкс
+                div
+                    +e.SPAN.number 888
+                    +e.SPAN.type люкс
                 +e.SPAN.price
                     span 9 990₽
                     span в сутки
