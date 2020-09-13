@@ -36,7 +36,7 @@ const path = {
         less: `${_src}/less/index.less`,
         img: `${_src}/img/**/*`,
         fonts: `${_src}/fonts/**/*.ttf`,
-        js: [`${_src}/js/libs/*.js`, `${_src}/js/**/*.js`]
+        js: [`${_src}/js/libs/**/*.js`, `${_src}/js/**/*.js`]
     },
     watch: {
         views: `${_src}/views/**/*.pug`,

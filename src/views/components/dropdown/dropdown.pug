@@ -18,3 +18,6 @@ mixin dropdown(label, title, items, accept, decline)
                     if decline
                         +e.decline
                             +button('Очистить', false, 'default', 'gray')
+
+mixin date-picker()
+    +b.INPUT.datepicker-here(data-language='ru')
