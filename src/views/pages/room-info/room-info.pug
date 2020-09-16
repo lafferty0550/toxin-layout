@@ -16,14 +16,15 @@ html
         meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
         meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
         meta(name="HandheldFriendly" content="true")
-        link(rel="stylesheet" href="/css/index.css")
+        base(href="https://lafferty0550.github.io/toxin-layout/")
+        link(rel="stylesheet" href="./css/index.css")
     body
         include ../../components/header/header
         +b.room-info
             +e.images
-                +e.IMG(src="/img/room-info/image.png").image_main
-                +e.IMG(src="/img/room-info/image2.png").image_secondary
-                +e.IMG(src="/img/room-info/image3.png").image_thirdly
+                +e.IMG(src="./img/room-info/image.png").image_main
+                +e.IMG(src="./img/room-info/image2.png").image_secondary
+                +e.IMG(src="./img/room-info/image3.png").image_thirdly
             .container
                 +e.info
                     +e.room-info
@@ -31,7 +32,7 @@ html
                     +e.feedback
                         .h2 Впечатления от номера
                         +e.statistic
-                            +e.IMG(src="/img/icons/pie.svg")
+                            +e.IMG(src="./img/icons/pie.svg")
                             +bullet-list(null, feedback_bullets)
                     +comment-list('Отзывы посетителей номера', comments)
                     +bullet-list('Правила', bullets)
@@ -40,4 +41,4 @@ html
                         .body Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
                 +book-room()
         include ../../components/footer/footer
-        script(src="/js/index.js")
+        script(src="./js/index.js")

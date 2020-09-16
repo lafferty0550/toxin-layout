@@ -10,6 +10,7 @@ const cleanCSS = require('gulp-clean-css');
 const gulpEmpty = require('gulp-empty');
 const imagemin = require('gulp-imagemin');
 const ttf2woff = require('gulp-ttf2woff');
+const ghPages = require('gulp-gh-pages');
 const htmlmin = require('gulp-htmlmin');
 const ttf2svg = require('gulp-ttf-svg');
 const pug = require('gulp-pug');
@@ -45,6 +46,11 @@ const path = {
     },
     clean: `./${_dist}/`
 };
+
+gulp.task('deploy', () => src(`${_dist}/**/*`).pipe(ghPages({
+    remoteUrl: 'https://github.com/lafferty0550/toxin-layout.git',
+    branch: 'gh-pages'
+})));
 
 const browserSync = () => {
     browsersync.init({
