@@ -19,6 +19,7 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 
 const production = argv.production;
+process.env.NODE_ENV = production ? 'production' : 'development';
 
 const _dist = `dist`;
 const _src = `src`;

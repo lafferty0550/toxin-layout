@@ -1,0 +1,9 @@
+head
+    meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+    meta(name="HandheldFriendly" content="true")
+    if process.env.NODE_ENV === 'production'
+        base(href="https://lafferty0550.github.io/toxin-layout/")
+    else
+        base(href="http://localhost:3000/")
+    link(rel="stylesheet" href="./css/index.css")

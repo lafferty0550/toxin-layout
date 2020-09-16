@@ -2,12 +2,7 @@ include ../../libs/bemto/bemto
 
 doctype html
 html
-    head
-        meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
-        meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
-        meta(name="HandheldFriendly" content="true")
-        base(href="https://lafferty0550.github.io/toxin-layout/")
-        link(rel="stylesheet" href="./css/index.css")
+    include ../../includes/head
     body
         include ../../components/header/header
         +b.login-page

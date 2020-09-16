@@ -4,7 +4,7 @@
 
   &__star {
     .square(2.4rem);
-    background: url(./img/icons/star_border.svg) no-repeat;
+    background: url(../img/icons/star_border.svg) no-repeat;
     cursor: pointer;
     transition: .2s;
   }
@@ -12,7 +12,7 @@
 
 .rating__star:hover,
 .rating__star:hover ~ .rating__star {
-  background: url(./img/icons/star.svg) no-repeat;
+  background: url(../img/icons/star.svg) no-repeat;
 }
 
 .rating[data-total-value="1"] .rating__star:nth-child(n + 5),
@@ -20,6 +20,6 @@
 .rating[data-total-value="3"] .rating__star:nth-child(n + 3),
 .rating[data-total-value="4"] .rating__star:nth-child(n + 2),
 .rating[data-total-value="5"] .rating__star:nth-child(n + 1) {
-  background: url(./img/icons/star.svg) no-repeat;
+  background: url(../img/icons/star.svg) no-repeat;
 }
 
