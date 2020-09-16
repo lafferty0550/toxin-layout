@@ -68,3 +68,32 @@
     font-size: 1.2rem;
   }
 }
+
+.date-picker {
+  position: relative;
+
+  &__expand {
+    .square(@field-height);
+    .flex-center();
+    background: url(../../../img/icons/expand_more.svg) no-repeat center center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+  }
+
+  > input {
+    width: 100%;
+    border: 1px solid @dark-shade-25;
+    border-radius: .4rem;
+    padding: 1.3rem .7rem 1.5rem 1.3rem;
+    font-size: 1.2rem;
+    color: @dark-shade-75;
+    cursor: pointer;
+    background-color: transparent;
+  }
+}
+
+.range-date-picker {
+  .flex();
+}

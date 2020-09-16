@@ -8,28 +8,54 @@ include ../../components/pagination/pagination
 - var rich_options = [{label: 'Широкий коридор', description: 'Ширина коридоров в номере не менее 91 см.'}, {label: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист  и проводит до номера.'}];
 - var addition_options = ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь'];
 
-.container
-    +b.toolbar
-        +dropdown('Даты пребывания в отеле', '19 авг - 23 авг', [])
-        +dropdown('Гости', '3 гостя, 1 младенец', [])
-        +range-slider('диапазон цены', 'Стоимость за сутки пребывания в номере', 5000, 10000, 0, 20000)
-        +checkbox-list('Checkbox Buttons', options)(class='toolbar__options')
-        +checkbox-list('доступность', rich_options, true)(class='toolbar__availability')
-        +dropdown('удобства номера', '2 спальни, 2 кровати...', [])
-        +checkbox-list-expandable('дополнительные удобства', addition_options)(class='toolbar__addition')
-    +b.list
-        .h1 Номера, которые мы для вас подобрали
-        +e.cards
-            +room-card()
-            +room-card()
-            +room-card()
-            +room-card()
-            +room-card()
-            +room-card()
-            +room-card()
-            +room-card()
-            +room-card()
-            +room-card()
-            +room-card()
-            +room-card()
-        +pagination(null, '1 – 12 из 100+ вариантов аренды')
+include ../../libs/bemto/bemto
+
+doctype html
+html
+    head
+        meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+        meta(name="HandheldFriendly" content="true")
+        link(rel="stylesheet" href="/css/index.css")
+    body
+        include ../../components/header/header
+        .container
+            +b.toolbar
+                +dropdown('Даты пребывания в отеле', '19 авг - 23 авг', [])
+                +dropdown('Гости', '3 гостя, 1 младенец', [])
+                +range-slider('диапазон цены', 'Стоимость за сутки пребывания в номере', 5000, 10000, 0, 20000)
+                +checkbox-list('Checkbox Buttons', options)(class='toolbar__options')
+                +checkbox-list('доступность', rich_options, true)(class='toolbar__availability')
+                +dropdown('удобства номера', '2 спальни, 2 кровати...', [])
+                +checkbox-list-expandable('дополнительные удобства', addition_options)(class='toolbar__addition')
+            +b.list
+                .h1 Номера, которые мы для вас подобрали
+                +e.cards
+                    a(href="/pages/room-info/room-info.html")
+                        +room-card()
+                    a(href="/pages/room-info/room-info.html")
+                        +room-card()
+                    a(href="/pages/room-info/room-info.html")
+                        +room-card()
+                    a(href="/pages/room-info/room-info.html")
+                        +room-card()
+                    a(href="/pages/room-info/room-info.html")
+                        +room-card()
+                    a(href="/pages/room-info/room-info.html")
+                        +room-card()
+                    a(href="/pages/room-info/room-info.html")
+                        +room-card()
+                    a(href="/pages/room-info/room-info.html")
+                        +room-card()
+                    a(href="/pages/room-info/room-info.html")
+                        +room-card()
+                    a(href="/pages/room-info/room-info.html")
+                        +room-card()
+                    a(href="/pages/room-info/room-info.html")
+                        +room-card()
+                    a(href="/pages/room-info/room-info.html")
+                        +room-card()
+                    a(href="/pages/room-info/room-info.html")
+                +pagination(null, '1 – 12 из 100+ вариантов аренды')
+        include ../../components/footer/footer
+        script(src="/js/index.js")

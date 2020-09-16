@@ -32,7 +32,7 @@ const path = {
         js: `${_dist}/js/`
     },
     src: {
-        views: `${_src}/views/index.pug`,
+        views: `${_src}/views/**/*.pug`,
         less: `${_src}/less/index.less`,
         img: `${_src}/img/**/*`,
         fonts: `${_src}/fonts/**/*.ttf`,
@@ -40,7 +40,7 @@ const path = {
     },
     watch: {
         views: `${_src}/views/**/*.pug`,
-        css: [`${_src}/less/**/*.less`, `${_src}/views/**/*.less`],
+        css: [`${_src}/less/**/*`, `${_src}/views/**/*.less`],
         img: `${_src}/img/**/*.svg`,
         js: `${_src}/js/**/*.js`
     },

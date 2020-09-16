@@ -1,3 +1,5 @@
+include ../../libs/bemto/bemto
+
 mixin bullet(label, color)
     - var className = `${color ? `_${color}` : ''}`;
     +b.bullet(class=className)

@@ -1,10 +1,11 @@
+include ../../../../libs/bemto/bemto
+
 include ../../../dropdown/dropdown
 include ../../../button/button
 
 +b.find-room
     .h1 Найдём номера под ваши пожелания
-    +e.choice
-        +dropdown('Прибытие', 'ДД.ММ.ГГГГ', [], true, false)
-        +dropdown('Выезд', 'ДД.ММ.ГГГГ', [], true, false)
+    +range-datepicker('Въезд', 'Выезд')
     +dropdown('Гости', 'Сколько гостей', [], true, true)
-    +button('Подобрать номер', true, 'contained')
+    a(href="/pages/search-room/search-room.html")
+        +button('Подобрать номер', true, 'contained')

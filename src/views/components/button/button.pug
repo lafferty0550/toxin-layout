@@ -1,3 +1,5 @@
+include ../../libs/bemto/bemto
+
 mixin button(label, isBig, type, color)
     - var className = `${isBig ? 'button_big' : ''} button_${type} ${color ? `button_${color}` : ''} h3-cta`;
     .button(class=className)=label

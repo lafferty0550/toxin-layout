@@ -1,4 +1,7 @@
+include ../../libs/bemto/bemto
+
 include ../counter/counter
+include ../button/button
 
 mixin dropdown(label, title, items, accept, decline)
     +b.dropdown
@@ -19,5 +22,13 @@ mixin dropdown(label, title, items, accept, decline)
                         +e.decline
                             +button('Очистить', false, 'default', 'gray')
 
-mixin date-picker()
-    +b.INPUT.datepicker-here(data-language='ru')
+mixin datepicker(label)
+    +b.date-picker
+        +e.expand
+        +e.label.h3=label
+        +b.INPUT.datepicker-here.date-picker(placeholder='ДД.ММ.ГГГГ')
+
+mixin range-datepicker(labelA, labelB)
+    +b.range-date-picker
+        +datepicker(labelA)
+        +datepicker(labelB)

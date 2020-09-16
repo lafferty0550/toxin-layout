@@ -1,7 +1,9 @@
+include ../../libs/bemto/bemto
 include ../button/button
 
 +b.header
-    +b.IMG(src="../../../img/icons/logo.svg").logo
+    a(href="/index.html")
+        +b.IMG(src="../../../img/icons/logo.svg").logo
     nav
         ul
             li
@@ -15,6 +17,8 @@ include ../button/button
             li
                 a Соглашения
             li
-                +button('Войти', false, 'outlined')
+                a(href="/pages/login/login.html")
+                    +button('Войти', false, 'outlined')
             li
-                +button('Зарегистрироваться', false, 'contained')
+                a(href="/pages/registration/registration.html")
+                    +button('Зарегистрироваться', false, 'contained')
