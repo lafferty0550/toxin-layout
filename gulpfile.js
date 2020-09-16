@@ -10,7 +10,6 @@ const cleanCSS = require('gulp-clean-css');
 const gulpEmpty = require('gulp-empty');
 const imagemin = require('gulp-imagemin');
 const ttf2woff = require('gulp-ttf2woff');
-const ghPages = require('gulp-gh-pages');
 const htmlmin = require('gulp-htmlmin');
 const ttf2svg = require('gulp-ttf-svg');
 const pug = require('gulp-pug');
@@ -32,7 +31,7 @@ const path = {
         js: `${_dist}/js/`
     },
     src: {
-        views: `${_src}/views/**/*.pug`,
+        views: [`${_src}/views/index.pug`, `${_src}/views/pages*/**/*.pug`],
         less: `${_src}/less/index.less`,
         img: `${_src}/img/**/*`,
         fonts: `${_src}/fonts/**/*.ttf`,
@@ -46,11 +45,6 @@ const path = {
     },
     clean: `./${_dist}/`
 };
-
-gulp.task('deploy', () => src(`${_dist}/**/*`).pipe(ghPages({
-    remoteUrl: 'https://github.com/lafferty0550/TOXIN.git',
-    branch: 'gh-pages'
-})));
 
 const browserSync = () => {
     browsersync.init({
@@ -113,7 +107,7 @@ const js = () => {
 };
 
 const watchFiles = () => {
-    gulp.watch([path.watch.views], views);
+    gulp.watch(path.watch.views, views);
     gulp.watch(path.watch.css, css);
     gulp.watch([path.watch.img], images);
     gulp.watch([path.watch.js], js);
