@@ -1,9 +1,0 @@
-include ../../../libs/bemto/bemto
-
-mixin sub-text-field(label, placeholder)
-    +b.text-field
-        if (label)
-            +e.label.h3-cta=label
-        +e.input-wrapper
-            +e.INPUT(type="text", placeholder=placeholder).input
-            +e.arrow

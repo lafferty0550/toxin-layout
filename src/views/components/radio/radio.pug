@@ -1,8 +1,0 @@
-include ../../libs/bemto/bemto
-
-mixin radio(label, name)
-    +b.radio-button
-        +e.LABEL.label
-            input(type="radio", name=name)
-            +e.SPAN.input
-            span=label

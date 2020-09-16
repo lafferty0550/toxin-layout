@@ -1,9 +1,0 @@
-// TODO: review
-include ../../libs/bemto/bemto
-
-mixin like(value)
-    +b.like(class=`${attributes.class || ''}`)
-        input(type="checkbox", id="here", name="here")
-        +e.LABEL.label(for="here")
-            +e.input
-            span=value
